@@ -8,7 +8,7 @@ public class EarthQuakeLoader extends AsyncTaskLoader<List<Earthquake>>{
 
     private String mUrl;
 
-    public EarthquakeLoader(Context context, String url) {
+    public EarthQuakeLoader(Context context, String url) {
         super(context);
         mUrl = url;
     }
