@@ -110,7 +110,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     @Override
     public Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {
         // Create a new loader for the given URL
-        return new EarthquakeLoader(this, USGS_REQUEST_URL);
+        return new EarthQuakeLoader(this, USGS_REQUEST_URL);
     }
 
     @Override
@@ -128,8 +128,8 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (earthquakes != null && !earthquakes.isEmpty()) {
-            //mAdapter.addAll(earthquakes);
-            updateUi(earthquakes);
+            mAdapter.addAll(earthquakes);
+            //updateUi(earthquakes);
         }
     }
 
